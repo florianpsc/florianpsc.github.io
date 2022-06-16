@@ -9,8 +9,8 @@
 .contenucontrole {
     display : grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "contenugauche contenucentre contenudroite"
-        "contenubas";
+    grid-template-areas: "contenugauche contenucentre contenudroite
+        casedubas";
     width:auto;
     margin: auto;
 }
@@ -38,7 +38,6 @@
     background-color: grey;
     margin-left:20px;
     margin-right: 20px;
-    margin-bottom: 50px;
     margin-top: 15px;
     text-align: left;
     border-block: dotted;
@@ -92,15 +91,55 @@ h1{
 
 .contenucentre3 {
     text-align: justify;
+    font-size: large;
     border-top: none;
     border-left: 2px solid black;
     border-right: 2px solid black;
     border-bottom: none;
     border-width: 2px;
-    margin-left:30%;
-    margin-right:30%;
+    margin-left:20%;
+    margin-right:20%;
+    padding:15px;
 
 }
+
+.contenudroite {
+    width: 75%;
+    height: 350px;
+    grid-area: "gauche";
+    background-color: lightgrey;
+    margin-left: 15px;
+    margin-right: 3px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    text-align: right;
+    border-block: inset;
+    border-top: 2px solid black;
+    border-left: 2px solid lightgrey;
+    border-bottom: 5px solid black;
+    border-right:5px solid black;
+    border-width: 2px;
+}
+
+.titredroite {
+    margin-top: 35px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    border-block-color: black;
+    border-block-style: inset;
+    border-bottom: 2px solid lightgrey;
+    border-bottom-color: darkgrey;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid;
+    border-right-color: lightgray;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-width: 1px;
+}
+
 .titregauche {
     margin-top:35px;
     margin-right:15px;
@@ -149,17 +188,44 @@ h1{
     margin-right:10px;
 }
 
-.contact{
-  color: #D60920;
-}
-
 .footer{
     grid-area:ft
 }
 
-.casedubas{
-    grid-area:"footer";
+.casedubas {
+    background-color:lightgrey;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-top: 700px;
+    margin-bottom: 100px;
+    align-content:center;
+    text-align:center;
+    margin-left:40px;
+    margin-right:40px;
+}
 
+.titrebas {
+    background-color:white;
+    font-style:italic;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid lightgrey;
+    border-block-color: black;
+    border-block-style: inset;
+    border-bottom: 1px solid;
+    border-bottom-color: darkgrey;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid;
+    border-right-color: lightgray;
+    background-color: white;
+    justify-content: center;
+    border-width: 1px;
+    height: contain;
+    width: 98%;
+    align-content: center;
 }
 
 .titrecentre1{
@@ -175,90 +241,4 @@ body{
   line-height: 1.5;
 }
 
-a{
-  text-decoration: none;
-  color: darkred;
-}
 
-a:hover{
-  text-decoration: underline;
-}
-
-.bloc{
-  margin-bottom: 1rem;
-}
-
-.contenucolonnedroite{
-
-  grid-area: right-column;
-  display: grid;
-  grid-template-rows: 250px 1fr;
-  grid-template-areas: 
-    "header"
-    "content";
-}
-
-.contenucolonnegauche{
-  grid-area: left-column;
-  padding: 50px;
-  background-color: #0061A4;
-  color: white;
-}
-
-.bandeauhaut{
-  top: 0px;
-right: 0px;
-left: 0px;
-bottom: 0px;
-  height: 200px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  margin-top: 0px
-}
-
-.bandeaubas{
-  position: absolute;
-  padding: 10px 10px 10px 10px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100px;
-  margin-top: 1500px;
-  margin-bottom: 100px;
-}
-
-p{
-  margin: 0 0 1rem;
-  font-size: 14px;
-}
-
-h2{
-  margin: 0 0 1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #03224C;
-}
-
-
-
-.titre{
-  grid-area: header;
-  padding: 10px;
-  background-color: #D60920;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contenu{
-  padding: 50px;
-}
-
-.photo{
-  border-image: 50%;
-  max-width: 300px;
-  margin: auto;
- display: block;
-  margin-bottom: 50px;
-}
